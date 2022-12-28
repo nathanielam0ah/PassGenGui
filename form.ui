@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ui_MainWindow</class>
+ <widget class="QMainWindow" name="Ui_MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>626</width>
+    <height>248</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ui_MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+	background-color: qlineargradient(spread:pad, x1:0.129, y1:0.233, x2:0.851, y2:0.846, stop:0.0876289 rgba(147, 124, 168, 255), stop:1 rgba(128, 226, 255, 255));
+}
+
+* {
+	color: #fff;
+	font: 28pt &quot;FontAwesome&quot;;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="_genpass">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>120</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*
+{
+	background-color: rgba(0,0,0,0.2);
+}
+*:Hover 
+{
+	background-color: rgba(0,0,0,0.4);
+}
+*:Pushed
+{
+	background-color: rgba(255,255,255,0.6);
+}</string>
+    </property>
+    <property name="text">
+     <string>Generate</string>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>581</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="_displaypass">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(246, 245, 244, 0.2);
+border: none;</string>
+     </property>
+     <property name="text">
+      <string>Password: </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="_displayedit">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(246, 245, 244, 0.2);
+border: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Lenght:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>626</width>
+     <height>45</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
