@@ -13,6 +13,7 @@ class MainWindow(QMainWindow):
         def __init__(self):
                 super(MainWindow, self).__init__()
                 self._displayedit = QLineEdit
+                self._displaypass = QLabel
                 loadUi("form.ui", self)
 
                 self._genpass.clicked.connect(self._genpassClicked)
@@ -26,7 +27,6 @@ class MainWindow(QMainWindow):
                         clipboard = QApplication.clipboard()
                         clipboard.setText(text)
                         #time.sleep(1)
-                        self._displayedit.clear()
                 else:
                         self._displaypass.setText("Password: Not digit.")
                         self._displaypass.clear()
