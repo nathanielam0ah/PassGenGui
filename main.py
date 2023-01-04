@@ -12,6 +12,7 @@ from PyQt5.uic import loadUi
 class MainWindow(QMainWindow):
         def __init__(self):
                 super(MainWindow, self).__init__()
+                self._displayedit = QLineEdit
                 loadUi("form.ui", self)
 
                 self._genpass.clicked.connect(self._genpassClicked)
@@ -20,10 +21,14 @@ class MainWindow(QMainWindow):
                 if (self._displayedit.text()).isdigit() == True:
                         pwd = Generator(int(self._displayedit.text()))
                         self._displaypass.setText(f"Password: {pwd}")
+                        text = self._displaypass.text()
+                        text=text[9:]
+                        clipboard = QApplication.clipboard()
+                        clipboard.setText(text)
+                        #time.sleep(1)
                         self._displayedit.clear()
                 else:
-                        self._displaypass.setText("Try Again")
-                        time.sleep(2)
+                        self._displaypass.setText("Password: Not digit.")
                         self._displaypass.clear()
 if __name__ == "__main__":
         
